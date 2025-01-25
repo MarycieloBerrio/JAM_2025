@@ -1,22 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://bufrl4l7a4cox"]
 
 [ext_resource type="PackedScene" uid="uid://ce7m0u0yf2oqh" path="res://player.tscn" id="1_q6qkq"]
-[ext_resource type="PackedScene" uid="uid://25qm4gka3hn7" path="res://platform.tscn" id="2_3fkip"]
-[ext_resource type="PackedScene" uid="uid://crmtm5qsqhw0a" path="res://plataform-glass.tscn" id="3_3ih6y"]
+[ext_resource type="Texture2D" path="res://sprites/FONDO.png" id="3_0qkag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jphmx"]
+size = Vector2(868.5, 133)
 
 [node name="Main" type="Node"]
 
-[node name="Platform" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(108, 216)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_0qkag")
 
 [node name="Player" parent="." instance=ExtResource("1_q6qkq")]
-position = Vector2(107, 105)
+position = Vector2(131, 422)
 
-[node name="Platform2" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(172, 194)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-15, 15)
 
-[node name="Platform3" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(171, 249)
-
-[node name="Plataform-glass" parent="." instance=ExtResource("3_3ih6y")]
-position = Vector2(256, 264)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(448.75, 570)
+shape = SubResource("RectangleShape2D_jphmx")

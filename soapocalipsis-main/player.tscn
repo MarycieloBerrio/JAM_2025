@@ -96,3 +96,6 @@ animation = &"static"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-10, 25, 9, 25, 12, 21, 12, 16, 8, 10, 2, 7, -4, 7, -10, 10, -14, 16, -14, 21)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
