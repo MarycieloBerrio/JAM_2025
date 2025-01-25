@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dyc2q0rl31ksw"]
+[gd_scene load_steps=2 format=3 uid="uid://dyc2q0rl31ksw"]
 
-[node name="Obstacle-bottle" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://5iss6fs5q253" path="res://sprites/obstacle-bottle.png" id="1_184xw"]
+
+[node name="Obstacle-bottle" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, -40, 4, -40, 4, -34, 9, -26, 10, -22, 10, 4, 10, 37, -14, 37, -14, -1, -14, -22, -13, -26, -8, -34)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_184xw")
