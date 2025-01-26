@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bufrl4l7a4cox"]
+[gd_scene load_steps=14 format=3 uid="uid://bufrl4l7a4cox"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_2n8ms"]
 [ext_resource type="Texture2D" uid="uid://dxr04db3sm848" path="res://sprites/nuevo fondo.png" id="1_e0joo"]
@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dyc2q0rl31ksw" path="res://obstacle-bottle.tscn" id="2_iw0ll"]
 [ext_resource type="AudioStream" uid="uid://cqisgunqv7sjv" path="res://audios/man-is-he-mega-glbml-22045.mp3" id="5_s0f6d"]
 [ext_resource type="PackedScene" uid="uid://bl4d226w8pba7" path="res://plataform-glass.tscn" id="6_4hxg8"]
-[ext_resource type="PackedScene" path="res://mirilla.tscn" id="7_2vmxq"]
-[ext_resource type="PackedScene" path="res://agua.tscn" id="7_xgleo"]
+[ext_resource type="PackedScene" uid="uid://fpv2hxk76e1o" path="res://mirilla.tscn" id="7_2vmxq"]
+[ext_resource type="PackedScene" uid="uid://lvptcl3f1fkl" path="res://agua.tscn" id="7_xgleo"]
 [ext_resource type="Script" path="res://mirilla.gd" id="8_5asrq"]
 [ext_resource type="PackedScene" uid="uid://dcsboo61bawf6" path="res://projectile.tscn" id="9_u38te"]
 
@@ -53,11 +53,7 @@ position = Vector2(1348, 421)
 [node name="Platform8" parent="." instance=ExtResource("2_3fkip")]
 position = Vector2(1593, 428)
 
-[node name="Player" parent="." instance=ExtResource("1_q6qkq")]
-position = Vector2(201, 458)
-
 [node name="Meson" type="StaticBody2D" parent="."]
-position = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson"]
 position = Vector2(1757, 581.875)
@@ -105,17 +101,16 @@ position = Vector2(1771, 411)
 position = Vector2(2520, 442)
 scale = Vector2(2, 2)
 
-[node name="Obstacle-imanBanana" parent="." instance=ExtResource("12_eeq8j")]
-position = Vector2(3156, 424)
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 93.0
+offset_top = 380.0
+offset_right = 304.0
+offset_bottom = 455.0
+text = "The keyboard player need run and the mouse need destroy the fireman.
+"
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Obstacle-imanEstrella" parent="." instance=ExtResource("13_8twoq")]
-position = Vector2(3354, 273)
-
-[node name="obstacle-imanSandia" parent="." instance=ExtResource("14_e276r")]
-position = Vector2(3359, 406)
-
-[node name="obstacle-imanGameJam" parent="." instance=ExtResource("15_3r3h2")]
-position = Vector2(3444, 357)
-
-[node name="Jelly-Platfotm" parent="." instance=ExtResource("16_qxxef")]
-position = Vector2(3019, 508)
+[node name="Player" parent="." instance=ExtResource("1_q6qkq")]
+position = Vector2(201, 458)
