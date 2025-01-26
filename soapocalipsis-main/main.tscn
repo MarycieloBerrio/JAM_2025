@@ -16,11 +16,14 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 size = Vector2(4592, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
 size = Vector2(86.5, 646.25)
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -31,6 +34,9 @@ size = Vector2(4207, 130.5)
 size = Vector2(86.5, 362.5)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -49,8 +55,12 @@ parameters/looping = true
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 offset_left = -25.0
 offset_right = 4499.0
+=======
+offset_right = 4766.0
+>>>>>>> Stashed changes
 =======
 offset_right = 4766.0
 >>>>>>> Stashed changes
@@ -88,7 +98,11 @@ position = Vector2(187, 69)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(1198, 477)
+=======
+position = Vector2(127, 501)
+>>>>>>> Stashed changes
 =======
 position = Vector2(127, 501)
 >>>>>>> Stashed changes
@@ -109,7 +123,11 @@ position = Vector2(1194, 358)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(2296, 582.5)
+=======
+position = Vector2(2103.5, 582.5)
+>>>>>>> Stashed changes
 =======
 position = Vector2(2103.5, 582.5)
 >>>>>>> Stashed changes
