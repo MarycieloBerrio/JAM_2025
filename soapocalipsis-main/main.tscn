@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bufrl4l7a4cox"]
+[gd_scene load_steps=12 format=3 uid="uid://bufrl4l7a4cox"]
 
 [ext_resource type="PackedScene" uid="uid://ce7m0u0yf2oqh" path="res://player.tscn" id="1_q6qkq"]
 [ext_resource type="PackedScene" uid="uid://25qm4gka3hn7" path="res://platform.tscn" id="2_3fkip"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dwwtv00shfut8" path="res://sprites/FONDO.png" id="3_uon1l"]
 [ext_resource type="AudioStream" uid="uid://cqisgunqv7sjv" path="res://audios/man-is-he-mega-glbml-22045.mp3" id="5_s0f6d"]
 [ext_resource type="PackedScene" uid="uid://bl4d226w8pba7" path="res://plataform-glass.tscn" id="6_4hxg8"]
+[ext_resource type="PackedScene" uid="uid://l7dqr60t0y0j" path="res://player2.tscn" id="7_6jwdj"]
+[ext_resource type="Script" path="res://mirilla.gd" id="8_bv7py"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
 size = Vector2(871, 130.5)
@@ -60,6 +62,7 @@ position = Vector2(435.5, 582.5)
 shape = SubResource("RectangleShape2D_nygrf")
 
 [node name="Meson2" type="StaticBody2D" parent="."]
+position = Vector2(79, 488)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson2"]
 position = Vector2(1218, 715)
@@ -90,3 +93,7 @@ position = Vector2(1360, 269)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-99.5, 38)
 shape = SubResource("RectangleShape2D_udgsr")
+
+[node name="Node2D" parent="." instance=ExtResource("7_6jwdj")]
+position = Vector2(79, 488)
+script = ExtResource("8_bv7py")
