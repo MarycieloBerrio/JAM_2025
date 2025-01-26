@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bufrl4l7a4cox"]
+[gd_scene load_steps=19 format=3 uid="uid://bufrl4l7a4cox"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_2n8ms"]
 [ext_resource type="Texture2D" uid="uid://dxr04db3sm848" path="res://sprites/nuevo fondo.png" id="1_e0joo"]
@@ -11,6 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://lvptcl3f1fkl" path="res://agua.tscn" id="7_xgleo"]
 [ext_resource type="Script" path="res://mirilla.gd" id="8_5asrq"]
 [ext_resource type="PackedScene" uid="uid://dcsboo61bawf6" path="res://projectile.tscn" id="9_u38te"]
+[ext_resource type="PackedScene" uid="uid://dng1rs7bjqlql" path="res://platform_banana.tscn" id="12_eeq8j"]
+[ext_resource type="PackedScene" uid="uid://con43c2hceuf5" path="res://obstacle_iman_estrella.tscn" id="13_8twoq"]
+[ext_resource type="PackedScene" uid="uid://cxfkxsnowetsa" path="res://obstacle_iman_sandia.tscn" id="14_e276r"]
+[ext_resource type="PackedScene" uid="uid://d270e2sjwb6qn" path="res://obstacle_iman_game_jam.tscn" id="15_3r3h2"]
+[ext_resource type="PackedScene" uid="uid://drcoxfaskq4xb" path="res://jelly_platfotm.tscn" id="16_qxxef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
 size = Vector2(3514, 131.75)
@@ -57,6 +62,7 @@ position = Vector2(1593, 428)
 position = Vector2(201, 458)
 
 [node name="Meson" type="StaticBody2D" parent="."]
+position = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson"]
 position = Vector2(1757, 581.875)
@@ -103,3 +109,18 @@ position = Vector2(1771, 411)
 [node name="Obstacle-bottle4" parent="." instance=ExtResource("2_iw0ll")]
 position = Vector2(2520, 442)
 scale = Vector2(2, 2)
+
+[node name="Obstacle-imanBanana" parent="." instance=ExtResource("12_eeq8j")]
+position = Vector2(3156, 424)
+
+[node name="Obstacle-imanEstrella" parent="." instance=ExtResource("13_8twoq")]
+position = Vector2(3354, 273)
+
+[node name="obstacle-imanSandia" parent="." instance=ExtResource("14_e276r")]
+position = Vector2(3359, 406)
+
+[node name="obstacle-imanGameJam" parent="." instance=ExtResource("15_3r3h2")]
+position = Vector2(3444, 357)
+
+[node name="Jelly-Platfotm" parent="." instance=ExtResource("16_qxxef")]
+position = Vector2(3019, 508)
