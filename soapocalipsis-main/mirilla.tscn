@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fpv2hxk76e1o"]
+
+[ext_resource type="Texture2D" uid="uid://i0l101qwasjk" path="res://sprites/mirilla.png" id="1_u3kk3"]
+
+[node name="mirilla" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u3kk3")
