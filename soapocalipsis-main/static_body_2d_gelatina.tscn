@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwmsuac80ikie"]
+[gd_scene load_steps=2 format=3 uid="uid://gi4k1em26ma1"]
 
 [ext_resource type="Texture2D" uid="uid://ddud4fn7tjjoi" path="res://sprites/pixilart-sprite.png" id="1_ekhcr"]
 
 [node name="StaticBody2DGelatina" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ekhcr")
-hframes = 2
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
 polygon = PackedVector2Array(-12, 0, -26, -1, -22, -5, -22, -10, -15, -25, 12, -25, 15, -24, 21, -12, 24, -3, 26, -1, 22, 3, -20, 5, -25, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ekhcr")
+hframes = 2
