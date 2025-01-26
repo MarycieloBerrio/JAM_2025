@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dja1dhnm86qm8"]
+
+[ext_resource type="Script" path="res://bubble_projectile.gd" id="1_mfc7w"]
+[ext_resource type="Texture2D" uid="uid://k6k7o4gesl7b" path="res://sprites/bubble1.png" id="1_rpqhe"]
+[ext_resource type="Texture2D" uid="uid://b8p6qtbi5gu07" path="res://sprites/bubble2.png" id="2_1uhm5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwb4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rpqhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1uhm5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbwn8"]
+size = Vector2(30, 27)
+
+[node name="bubble-projectile" type="StaticBody2D"]
+script = ExtResource("1_mfc7w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_pwb4t")
+frame = 1
+frame_progress = 0.34709
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_hbwn8")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0.499999, -1)
+scale = Vector2(1.35, 1.5)
+enable_node_path = NodePath("../CollisionShape2D")
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
