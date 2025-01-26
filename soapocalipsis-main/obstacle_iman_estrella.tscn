@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://con43c2hceuf5"]
+
+[ext_resource type="Texture2D" uid="uid://duiprnb1fgvrr" path="res://sprites/pixil-frame-0 (1).png" id="1_qdh5p"]
+
+[node name="Obstacle-imanEstrella" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, -16, -6, -16, -6, -15, -5, -15, -5, -14, -4, -14, -4, -13, -3, -13, -3, -11, 0, -11, 0, -10, 1, -10, 1, -9, 2, -9, 2, -6, 1, -6, 1, -5, 0, -5, 0, -4, -1, -4, -1, 2, -2, 2, -2, 3, -3, 3, -3, 4, -5, 4, -5, 3, -6, 3, -6, 2, -9, 2, -9, 3, -10, 3, -10, 4, -12, 4, -12, 3, -13, 3, -13, 2, -14, 2, -14, -4, -15, -4, -15, -5, -16, -5, -16, -6, -17, -6, -17, -9, -16, -9, -16, -10, -15, -10, -15, -11, -12, -11, -12, -13, -11, -13, -11, -14, -10, -14, -10, -15, -9, -15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qdh5p")
