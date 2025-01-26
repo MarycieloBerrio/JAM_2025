@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://dyc2q0rl31ksw" path="res://obstacle-bottle.tscn" id="2_iw0ll"]
 [ext_resource type="AudioStream" uid="uid://cqisgunqv7sjv" path="res://audios/man-is-he-mega-glbml-22045.mp3" id="5_s0f6d"]
 [ext_resource type="PackedScene" uid="uid://bl4d226w8pba7" path="res://plataform-glass.tscn" id="6_4hxg8"]
-[ext_resource type="PackedScene" uid="uid://fpv2hxk76e1o" path="res://mirilla.tscn" id="7_2vmxq"]
-[ext_resource type="PackedScene" uid="uid://lvptcl3f1fkl" path="res://agua.tscn" id="7_xgleo"]
+[ext_resource type="PackedScene" path="res://mirilla.tscn" id="7_2vmxq"]
+[ext_resource type="PackedScene" path="res://agua.tscn" id="7_xgleo"]
 [ext_resource type="Script" path="res://mirilla.gd" id="8_5asrq"]
-[ext_resource type="PackedScene" uid="uid://dcsboo61bawf6" path="res://projectile.tscn" id="9_u38te"]
+[ext_resource type="PackedScene" uid="uid://dwnq6rbm0fg78" path="res://projectile.tscn" id="9_u38te"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
 size = Vector2(3514, 131.75)

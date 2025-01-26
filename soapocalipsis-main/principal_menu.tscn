@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfy800jqbo3a"]
+
+[ext_resource type="Script" path="res://principal_menu.gd" id="1_ajj2n"]
+[ext_resource type="Texture2D" uid="uid://dwwtv00shfut8" path="res://sprites/FONDO.png" id="2_jso66"]
+[ext_resource type="Script" path="res://button_2.gd" id="3_fg8ty"]
+
+[node name="principal-menu" type="Node2D"]
+process_mode = 3
+position = Vector2(8, -8)
+script = ExtResource("1_ajj2n")
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(210, 114)
+texture = ExtResource("2_jso66")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 109.0
+offset_top = 93.0
+offset_right = 262.0
+offset_bottom = 159.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jugar"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Salir"
+script = ExtResource("3_fg8ty")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(183, 126)
+scale = Vector2(-4.6, 1)
+zoom = Vector2(5, 5)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
