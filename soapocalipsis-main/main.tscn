@@ -1,27 +1,30 @@
-[gd_scene load_steps=15 format=3 uid="uid://bufrl4l7a4cox"]
+[gd_scene load_steps=14 format=3 uid="uid://bufrl4l7a4cox"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_2n8ms"]
+[ext_resource type="Texture2D" uid="uid://dxr04db3sm848" path="res://sprites/nuevo fondo.png" id="1_e0joo"]
 [ext_resource type="PackedScene" uid="uid://ce7m0u0yf2oqh" path="res://player.tscn" id="1_q6qkq"]
 [ext_resource type="PackedScene" uid="uid://25qm4gka3hn7" path="res://platform.tscn" id="2_3fkip"]
 [ext_resource type="PackedScene" uid="uid://dyc2q0rl31ksw" path="res://obstacle-bottle.tscn" id="2_iw0ll"]
-[ext_resource type="Texture2D" uid="uid://dwwtv00shfut8" path="res://sprites/FONDO.png" id="3_uon1l"]
-[ext_resource type="PackedScene" path="res://static_body_2d_gelatina.tscn" id="4_5fnew"]
-[ext_resource type="Script" path="res://static_body_2d_gelatina.gd" id="5_elew2"]
 [ext_resource type="AudioStream" uid="uid://cqisgunqv7sjv" path="res://audios/man-is-he-mega-glbml-22045.mp3" id="5_s0f6d"]
 [ext_resource type="PackedScene" uid="uid://bl4d226w8pba7" path="res://plataform-glass.tscn" id="6_4hxg8"]
-[ext_resource type="PackedScene" path="res://mirilla.tscn" id="7_2vmxq"]
+[ext_resource type="PackedScene" uid="uid://fpv2hxk76e1o" path="res://mirilla.tscn" id="7_2vmxq"]
+[ext_resource type="PackedScene" uid="uid://lvptcl3f1fkl" path="res://agua.tscn" id="7_xgleo"]
 [ext_resource type="Script" path="res://mirilla.gd" id="8_5asrq"]
-[ext_resource type="PackedScene" uid="uid://dwnq6rbm0fg78" path="res://projectile.tscn" id="9_u38te"]
+[ext_resource type="PackedScene" uid="uid://dcsboo61bawf6" path="res://projectile.tscn" id="9_u38te"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
-size = Vector2(871, 130.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
-size = Vector2(86.5, 362.5)
+size = Vector2(3514, 131.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udgsr"]
 size = Vector2(219, 708)
 
 [node name="Main" type="Node"]
+script = ExtResource("1_2n8ms")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 3498.0
+offset_bottom = 648.0
+texture = ExtResource("1_e0joo")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_s0f6d")
@@ -29,78 +32,74 @@ volume_db = -18.432
 autoplay = true
 parameters/looping = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("3_uon1l")
-
 [node name="Platform" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(215, 435)
+position = Vector2(671, 413)
 
 [node name="Platform2" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(115, 401)
+position = Vector2(1020, 428)
 
 [node name="Platform3" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(158, 340)
+position = Vector2(849, 407)
 
 [node name="Platform4" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(105, 267)
+position = Vector2(2146, 430)
 
 [node name="Platform5" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(143, 205)
+position = Vector2(2367, 392)
 
 [node name="Platform7" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(88, 123)
+position = Vector2(1348, 421)
 
 [node name="Platform8" parent="." instance=ExtResource("2_3fkip")]
-position = Vector2(187, 69)
-
-[node name="StaticBody2DGelatina" parent="." instance=ExtResource("4_5fnew")]
-position = Vector2(607, 494)
-script = ExtResource("5_elew2")
+position = Vector2(1593, 428)
 
 [node name="Player" parent="." instance=ExtResource("1_q6qkq")]
-position = Vector2(49, 484)
+position = Vector2(201, 458)
 
 [node name="Meson" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson"]
-position = Vector2(435.5, 582.5)
+position = Vector2(1757, 581.875)
 shape = SubResource("RectangleShape2D_nygrf")
 
-[node name="Meson2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meson2"]
-position = Vector2(1218, 715)
-shape = SubResource("RectangleShape2D_nygrf")
+[node name="agua" parent="." instance=ExtResource("7_xgleo")]
+position = Vector2(507, 476)
+scale = Vector2(50, 1)
 
 [node name="Obstacle-bottle" parent="." instance=ExtResource("2_iw0ll")]
-position = Vector2(284, 441)
+position = Vector2(492, 442)
 scale = Vector2(2, 2)
 
 [node name="Plataform-glass" parent="." instance=ExtResource("6_4hxg8")]
-position = Vector2(378, 481)
+position = Vector2(1952, 475)
 scale = Vector2(0.35, 0.35)
 
 [node name="Plataform-glass3" parent="." instance=ExtResource("6_4hxg8")]
-position = Vector2(442, 438)
+position = Vector2(1158, 462)
 scale = Vector2(0.35, 0.35)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(281, 147)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-3.75, 96.75)
-shape = SubResource("RectangleShape2D_w07m7")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(1360, 269)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-99.5, 38)
+position = Vector2(2250, 87)
 shape = SubResource("RectangleShape2D_udgsr")
 
 [node name="mirilla" parent="." instance=ExtResource("7_2vmxq")]
 position = Vector2(127, 449)
 script = ExtResource("8_5asrq")
 projectile_scene = ExtResource("9_u38te")
+
+[node name="Obstacle-bottle2" parent="." instance=ExtResource("2_iw0ll")]
+position = Vector2(336, 480)
+
+[node name="Obstacle-bottle3" parent="." instance=ExtResource("2_iw0ll")]
+position = Vector2(412, 463)
+scale = Vector2(1.5, 1.5)
+
+[node name="Platform9" parent="." instance=ExtResource("2_3fkip")]
+position = Vector2(1771, 411)
+
+[node name="Obstacle-bottle4" parent="." instance=ExtResource("2_iw0ll")]
+position = Vector2(2520, 442)
+scale = Vector2(2, 2)

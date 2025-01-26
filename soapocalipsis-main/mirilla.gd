@@ -1,9 +1,10 @@
 extends Node2D
 
 @export var projectile_scene: PackedScene  # Escena del proyectil
-@export var fire_rate: float = 4.5  # Tiempo en segundos entre disparos (cadencia)
+@export var fire_rate: float = 1.5  # Tiempo en segundos entre disparos (cadencia)
 
 var can_shoot: bool = true  # Controla si se puede disparar
+var active_projectiles: Array = []  # Lista para rastrear los proyectiles activos
 
 func _process(delta):
 	# Actualiza la posición de la mirilla para que siga al mouse
@@ -27,6 +28,7 @@ func spawn_projectile():
 	projectile.position = get_global_mouse_position()
 	# Añade el proyectil como hijo del nodo principal
 	get_tree().root.add_child(projectile)
+	# Añade el proyectil a la lista de proyectiles activos
 	print("Proyectil creado en la posición: ", projectile.position)
 
 func start_fire_rate_timer():

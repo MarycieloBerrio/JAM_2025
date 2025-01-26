@@ -35,8 +35,8 @@ func _physics_process(delta: float) -> void:
 	handle_collisions()
 
 	# Mantener al personaje dentro de los límites de la pantalla
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	position.x = clamp(position.x, 0, screen_size.x+2500)
+	position.y = clamp(position.y, 0, screen_size.y+2500)
 
 	# Lógica de animaciones
 	update_animation()
@@ -55,9 +55,22 @@ func update_animation() -> void:
 
 
 func handle_collisions() -> void:
-	# Detectar si colisiona con un StaticBody2D
+	# Detectar si colisiona con un StaticBody2D o un nodo llamado "agua"
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()  # Obtiene el objeto colisionado
-		if collider and collider.has_method("repel_player"):
-			collider.repel_player(self)
+		if collider:
+			# Si colisiona con un nodo que tiene el nombre "agua"
+			if collider.name == "agua":
+				restart_level()
+
+			# Si el nodo tiene el método "repel_player", lo ejecuta
+			if collider.has_method("repel_player"):
+				collider.repel_player(self)
+
+func restart_level() -> void:
+	if get_tree() and get_tree().current_scene:
+		# Reinicia el nivel cargando la escena actual
+		get_tree().reload_current_scene()
+	else:
+		print("Error: No se puede acceder al árbol de nodos para reiniciar la escena.")
