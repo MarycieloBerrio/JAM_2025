@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwpgeudq7mmx5"]
+
+[ext_resource type="Texture2D" uid="uid://k6k7o4gesl7b" path="res://sprites/bubble1.png" id="1_2qr0m"]
+[ext_resource type="Texture2D" uid="uid://b8p6qtbi5gu07" path="res://sprites/bubble2.png" id="2_kj11h"]
+
+[sub_resource type="GDScript" id="GDScript_hkpkx"]
+script/source = "extends Area2D
+
+@export var speed: float = 400.0
+@export var direction: Vector2 = Vector2.ZERO
+
+func _process(delta: float) -> void:
+	# Mover el proyectil en la dirección especificada
+	position += direction * speed * delta
+
+func _on_area_entered(area: Area2D) -> void:
+	# Verificar si colisionó con el jugador
+	if area.name == \"Player\":
+		# Llamar a la función de reinicio del jugador
+		area.call(\"reset_position\")
+		# Eliminar el proyectil tras la colisión
+		queue_free()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwb4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qr0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kj11h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbwn8"]
+size = Vector2(30, 27)
+
+[node name="bubble-projectile" type="Area2D"]
+script = SubResource("GDScript_hkpkx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_pwb4t")
+frame = 1
+frame_progress = 0.34709
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_hbwn8")
