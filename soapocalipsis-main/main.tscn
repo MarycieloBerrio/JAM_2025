@@ -13,10 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://dcsboo61bawf6" path="res://projectile.tscn" id="9_u38te"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
+<<<<<<< Updated upstream
 size = Vector2(4592, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
 size = Vector2(86.5, 646.25)
+=======
+size = Vector2(4207, 130.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
+size = Vector2(86.5, 362.5)
+>>>>>>> Stashed changes
 
 [node name="Main" type="Node"]
 
@@ -27,8 +34,12 @@ autoplay = true
 parameters/looping = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
+<<<<<<< Updated upstream
 offset_left = -25.0
 offset_right = 4499.0
+=======
+offset_right = 4766.0
+>>>>>>> Stashed changes
 offset_bottom = 648.0
 texture = ExtResource("2_ic7cr")
 
@@ -54,7 +65,11 @@ position = Vector2(88, 123)
 position = Vector2(187, 69)
 
 [node name="StaticBody2DGelatina" parent="." instance=ExtResource("4_5fnew")]
+<<<<<<< Updated upstream
 position = Vector2(1198, 477)
+=======
+position = Vector2(127, 501)
+>>>>>>> Stashed changes
 script = ExtResource("5_elew2")
 
 [node name="Player" parent="." instance=ExtResource("1_q6qkq")]
@@ -63,7 +78,11 @@ position = Vector2(1194, 358)
 [node name="Meson" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson"]
+<<<<<<< Updated upstream
 position = Vector2(2296, 582.5)
+=======
+position = Vector2(2103.5, 582.5)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_nygrf")
 
 [node name="Meson2" type="StaticBody2D" parent="."]
