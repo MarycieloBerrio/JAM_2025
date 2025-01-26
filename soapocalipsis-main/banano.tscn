@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://21w0uec4ttsq"]
+
+[ext_resource type="Texture2D" uid="uid://b32gj2qaxhpi2" path="res://sprites/imanes/banano.png" id="1_qisit"]
+
+[node name="banano" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, -14, 17, -11, 18, -7, 20, -3, 20, 3, 18, 9, 14, 15, 9, 17, 6, 17, -8, 16, -15, 14, -16, 9, -19, 1, -17, -1, -9, -3, 0, -6, 6, -8, 11, -11, 9, -14, 7, -14, 6, -14, 4, -16, 3, -19, 9, -20, 19, -20, 25, -18, 20, -15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qisit")
