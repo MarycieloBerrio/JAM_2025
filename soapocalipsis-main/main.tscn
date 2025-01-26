@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bufrl4l7a4cox"]
+[gd_scene load_steps=15 format=3 uid="uid://bufrl4l7a4cox"]
 
 [ext_resource type="PackedScene" uid="uid://ce7m0u0yf2oqh" path="res://player.tscn" id="1_q6qkq"]
 [ext_resource type="PackedScene" uid="uid://25qm4gka3hn7" path="res://platform.tscn" id="2_3fkip"]
 [ext_resource type="PackedScene" uid="uid://dyc2q0rl31ksw" path="res://obstacle-bottle.tscn" id="2_iw0ll"]
 [ext_resource type="Texture2D" uid="uid://dwwtv00shfut8" path="res://sprites/FONDO.png" id="3_uon1l"]
+[ext_resource type="PackedScene" uid="uid://cwmsuac80ikie" path="res://static_body_2d_gelatina.tscn" id="4_5fnew"]
+[ext_resource type="Script" path="res://static_body_2d_gelatina.gd" id="5_elew2"]
 [ext_resource type="AudioStream" uid="uid://cqisgunqv7sjv" path="res://audios/man-is-he-mega-glbml-22045.mp3" id="5_s0f6d"]
 [ext_resource type="PackedScene" uid="uid://bl4d226w8pba7" path="res://plataform-glass.tscn" id="6_4hxg8"]
 [ext_resource type="PackedScene" uid="uid://fpv2hxk76e1o" path="res://mirilla.tscn" id="7_2vmxq"]
@@ -52,6 +54,10 @@ position = Vector2(88, 123)
 
 [node name="Platform8" parent="." instance=ExtResource("2_3fkip")]
 position = Vector2(187, 69)
+
+[node name="StaticBody2DGelatina" parent="." instance=ExtResource("4_5fnew")]
+position = Vector2(607, 494)
+script = ExtResource("5_elew2")
 
 [node name="Player" parent="." instance=ExtResource("1_q6qkq")]
 position = Vector2(49, 484)

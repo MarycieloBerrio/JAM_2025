@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var projectile_scene: PackedScene  # Escena del proyectil
-@export var fire_rate: float = 0.5  # Tiempo en segundos entre disparos (cadencia)
+@export var fire_rate: float = 4.5  # Tiempo en segundos entre disparos (cadencia)
 
 var can_shoot: bool = true  # Controla si se puede disparar
 

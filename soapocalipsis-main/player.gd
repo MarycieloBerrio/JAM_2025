@@ -4,6 +4,7 @@ signal hit
 @export var speed: float = 200
 @export var jump_force: float = -300
 @export var gravedad: float = 500
+@export var repulsion_force: float = 1000  # Fuerza de repulsión
 
 var screen_size: Vector2
 
@@ -52,8 +53,14 @@ func update_animation() -> void:
 			$AnimatedSprite2D.play("static")  # Cambia a animación estática
 
 func _on_body_entered(body: Node2D) -> void:
+	# Detecta si es la plataforma y aplica repulsión
+	if body.is_in_group("platform"):  # Asegúrate de añadir la plataforma al grupo "platform"
+		apply_repulsion(body)
+
 	emit_signal("hit", body)
 
-func start(pos: Vector2) -> void:
-	position = pos
-	$CollisionShape2D.disabled = false
+# Aplica la fuerza de repulsión al jugador
+func apply_repulsion(platform: Node2D) -> void:
+	# Obtener la dirección de la repulsión
+	var direction = (position - platform.position).normalized()  # Dirección hacia atrás desde la plataforma
+	velocity += direction * repulsion_force * get_physics_process_delta_time()
