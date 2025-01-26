@@ -95,5 +95,5 @@ position = Vector2(-99.5, 38)
 shape = SubResource("RectangleShape2D_udgsr")
 
 [node name="Node2D" parent="." instance=ExtResource("7_6jwdj")]
-position = Vector2(79, 488)
+position = Vector2(101, 490)
 script = ExtResource("8_bv7py")
