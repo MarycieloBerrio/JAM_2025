@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwnq6rbm0fg78"]
+[gd_scene load_steps=6 format=3 uid="uid://dcsboo61bawf6"]
 
 [ext_resource type="Script" path="res://projectile.gd" id="1_mrw8k"]
 [ext_resource type="Texture2D" uid="uid://k6k7o4gesl7b" path="res://sprites/bubble1.png" id="1_qwt8l"]
