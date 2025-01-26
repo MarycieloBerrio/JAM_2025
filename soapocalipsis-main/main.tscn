@@ -14,15 +14,21 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nygrf"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 size = Vector2(4592, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
 size = Vector2(86.5, 646.25)
 =======
+=======
+>>>>>>> Stashed changes
 size = Vector2(4207, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07m7"]
 size = Vector2(86.5, 362.5)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [node name="Main" type="Node"]
@@ -35,8 +41,12 @@ parameters/looping = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 offset_left = -25.0
 offset_right = 4499.0
+=======
+offset_right = 4766.0
+>>>>>>> Stashed changes
 =======
 offset_right = 4766.0
 >>>>>>> Stashed changes
@@ -66,7 +76,11 @@ position = Vector2(187, 69)
 
 [node name="StaticBody2DGelatina" parent="." instance=ExtResource("4_5fnew")]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(1198, 477)
+=======
+position = Vector2(127, 501)
+>>>>>>> Stashed changes
 =======
 position = Vector2(127, 501)
 >>>>>>> Stashed changes
@@ -79,7 +93,11 @@ position = Vector2(1194, 358)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meson"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(2296, 582.5)
+=======
+position = Vector2(2103.5, 582.5)
+>>>>>>> Stashed changes
 =======
 position = Vector2(2103.5, 582.5)
 >>>>>>> Stashed changes
